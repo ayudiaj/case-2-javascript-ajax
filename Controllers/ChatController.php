@@ -7,7 +7,6 @@ class ChatController {
     public function __construct($db) {
         $this->model = new ChatModel($db);
     }
-
     public function handleRequest() {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             if (isset($_POST['choose_user'])) {
@@ -19,7 +18,6 @@ class ChatController {
             }
         }
     }
-
     public function getMessages() {
         return $this->model->getMessages();
     }
